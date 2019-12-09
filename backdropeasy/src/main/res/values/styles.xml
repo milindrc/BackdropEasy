@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="SelectableItemTheme">
+        <item name="colorControlHighlight">@color/front_layer_color</item>
+    </style>
+
+    <style name="SelectableItemBackground">
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+</resources>
