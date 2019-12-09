@@ -16,7 +16,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.milindrc:BackdropEasy:Tag'
+	        implementation 'com.github.milindrc:BackdropEasy:[![GitHub version]]'
 	}
 
 [![](https://jitpack.io/v/milindrc/BackdropEasy.svg)](https://jitpack.io/#milindrc/BackdropEasy)
