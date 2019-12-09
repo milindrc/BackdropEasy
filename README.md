@@ -19,3 +19,4 @@ Step 2. Add the dependency
 	        implementation 'com.github.milindrc:BackdropEasy:Tag'
 	}
 
+[![](https://jitpack.io/v/milindrc/BackdropEasy.svg)](https://jitpack.io/#milindrc/BackdropEasy)
