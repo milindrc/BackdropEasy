@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/milindrc/BackdropEasy.svg)](https://jitpack.io/#milindrc/BackdropEasy)
 # BackdropEasy
 A simple implementation of material design backdrop.
 
@@ -16,7 +17,6 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.milindrc:BackdropEasy:[![GitHub version]]'
+	        implementation 'com.github.milindrc:BackdropEasy:v0.1'
 	}
 
-[![](https://jitpack.io/v/milindrc/BackdropEasy.svg)](https://jitpack.io/#milindrc/BackdropEasy)
