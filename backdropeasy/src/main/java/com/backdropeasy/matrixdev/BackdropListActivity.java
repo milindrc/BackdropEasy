@@ -57,7 +57,7 @@ public class BackdropListActivity extends AppCompatActivity {
 
     private void setStatusBarColor(int color) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            getWindow().setStatusBarColor(color);
+            getWindow().setStatusBarColor(color);
         }
     }
 
