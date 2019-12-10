@@ -29,6 +29,8 @@ public class BackdropListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        getSupportActionBar().hide();
+        setTheme(R.style.LibTheme);
         binding = (ActivityBackdropListBinding) DataBindingUtil.setContentView(this, R.layout.activity_backdrop_list);
 
         initUI();
@@ -55,7 +57,7 @@ public class BackdropListActivity extends AppCompatActivity {
 
     private void setStatusBarColor(int color) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setStatusBarColor(color);
+//            getWindow().setStatusBarColor(color);
         }
     }
 
