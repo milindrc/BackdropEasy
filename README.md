@@ -91,3 +91,16 @@ For styling add these to your theme
 
     <color name="back_layer_color">#4527A0</color>
     <color name="front_layer_color">#ffffff</color>
+    
+# Click Control
+
+For custom action on item click and preventing frament change refer this example
+    //ovveride this function in your activity
+    public boolean onClickMenuItem(MenuItem item){
+        if(item.getItemId()==R.id.sign_out){
+            signOut();
+            return true;
+        }
+        return false;
+    }
+
