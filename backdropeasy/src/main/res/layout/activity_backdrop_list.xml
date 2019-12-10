@@ -105,7 +105,7 @@
                 android:background="@drawable/front_layer_header"
                 android:orientation="vertical"
                 app:behavior_peekHeight="56dp"
-                app:layout_behavior=".DisableGestureBehavior">
+                app:layout_behavior="com.backdropeasy.matrixdev.DisableGestureBehavior">
 
                 <!--This is the backdrop's header with a title and icon-->
                 <LinearLayout
@@ -118,6 +118,7 @@
                     >
 
                     <TextView
+                        android:id="@+id/headerTitle"
                         android:paddingLeft="10dp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"

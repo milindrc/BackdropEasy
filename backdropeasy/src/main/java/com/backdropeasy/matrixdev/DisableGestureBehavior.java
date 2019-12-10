@@ -10,19 +10,20 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
+
 public class DisableGestureBehavior<T extends View> extends BottomSheetBehavior<T> {
+
     Context context;
     AttributeSet attributeSet;
 
     public DisableGestureBehavior(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
         this.context = context;
         this.attributeSet = attributeSet;
     }
 
-    public DisableGestureBehavior(Context context, AttributeSet attrs, Context context1, AttributeSet attributeSet) {
-        super(context, attrs);
-        this.context = context1;
-        this.attributeSet = attributeSet;
+    public DisableGestureBehavior() {
+        super();
     }
 
     @Override

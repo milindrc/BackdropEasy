@@ -93,7 +93,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:behavior_peekHeight="56dp"
-        app:layout_behavior=".DisableGestureBehavior">
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        >
 
         <!--This is the backdrop's header with a title and icon-->
         <LinearLayout
