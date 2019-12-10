@@ -50,3 +50,44 @@ Step 2. Add the dependency
 		}
 	    }
 	}
+
+Menu example: 
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+	    <group
+		android:id="@+id/group"
+		android:checkableBehavior="single"
+		>
+		<item
+		    android:checkable="true"
+		    android:id="@+id/a"
+		    android:title="A" />
+		<item
+		    android:checkable="true"
+		    android:id="@+id/b"
+		    android:title="B" />
+		<item
+		    android:id="@+id/c"
+		    android:checkable="true"
+		    android:title="C" />
+		<item
+		    android:id="@+id/d"
+		    android:checkable="true"
+		    android:title="D" />
+		<item
+		    android:checkable="true"
+		    android:id="@+id/e"
+		    android:title="E" />
+	    </group>
+
+	</menu>
+	
+# Styling
+
+For styling add these to your theme
+
+    <color name="back_layer_color">#4527A0</color>
+    <color name="front_layer_color">#ffffff</color>
