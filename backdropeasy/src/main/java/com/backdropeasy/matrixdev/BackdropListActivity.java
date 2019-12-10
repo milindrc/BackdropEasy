@@ -97,6 +97,7 @@ public class BackdropListActivity extends AppCompatActivity {
                 }
                 if(!animation.isRunning())
                     toggleSheet();
+                binding.dividerLayout.setVisibility(View.VISIBLE);
                 return false;
             }
         });
