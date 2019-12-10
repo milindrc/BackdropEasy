@@ -3,6 +3,8 @@
 # BackdropEasy
 A simple implementation of material design backdrop.
 
+`"A lot of flexibility not present, But quick to implement."`
+
 ![](backdrop.gif)
 
 Step 1. Add the JitPack repository to your build file
