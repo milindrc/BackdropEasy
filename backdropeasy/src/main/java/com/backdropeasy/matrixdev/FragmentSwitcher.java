@@ -19,7 +19,7 @@ public class FragmentSwitcher {
     public void changeFragment(Fragment fragment){
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.replace(R.id.contentLayout,fragment,fragment.getClass().getName());
-        ft.addToBackStack(fragment.getClass().getName());
+//        ft.addToBackStack(fragment.getClass().getName());
         ft.commitAllowingStateLoss();
     }
 }

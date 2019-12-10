@@ -6,6 +6,8 @@ import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,6 +28,7 @@ public class BackdropListActivity extends AppCompatActivity {
     private BottomSheetBehavior<LinearLayout> sheetBehavior;
     private boolean isOpened = false;
     private FragmentSwitcher fragmentSwitcher;
+    private ObjectAnimator animation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +95,8 @@ public class BackdropListActivity extends AppCompatActivity {
                     binding.toolbarTitle.setText(menuItem.getTitle());
                     binding.navigationView.setCheckedItem(menuItem);
                 }
-                toggleSheet();
+                if(!animation.isRunning())
+                    toggleSheet();
                 return false;
             }
         });
@@ -100,7 +104,19 @@ public class BackdropListActivity extends AppCompatActivity {
     }
 
     private void toggleSheet() {
-        ObjectAnimator.ofFloat(binding.menuButton, "rotation", isOpened ? 360f : 0f, isOpened ? 0f : 360f).setDuration(400).start();
+        binding.menuButton.setEnabled(false);
+        binding.filterIcon.setEnabled(false);
+        animation = ObjectAnimator.ofFloat(binding.menuButton, "rotation", isOpened ? 360f : 0f, isOpened ? 0f : 360f);
+        animation.setDuration(400);
+        animation.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                binding.menuButton.setEnabled(true);
+                binding.filterIcon.setEnabled(true);
+            }
+        });
+        animation.start();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
