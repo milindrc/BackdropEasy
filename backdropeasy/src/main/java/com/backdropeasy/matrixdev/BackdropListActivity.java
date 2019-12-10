@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -99,6 +100,13 @@ public class BackdropListActivity extends AppCompatActivity {
                     toggleSheet();
                 binding.dividerLayout.setVisibility(View.VISIBLE);
                 return false;
+            }
+        });
+
+        binding.contentLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
             }
         });
 

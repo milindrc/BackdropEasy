@@ -153,15 +153,15 @@
                 </RelativeLayout>
 
                 <!--And finally this is the body of the backdrop's content. You can add here whatever you need inside a view group (LinearLayout, RelativeLayout, SwipeRefreshLayout, ConstraintLayout, etc.)-->
+
+
                     <FrameLayout
-                        android:clickable="true"
                         android:id="@+id/content"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         >
 
                         <!--The content's body goes here-->
-
 
                     </FrameLayout>
 
