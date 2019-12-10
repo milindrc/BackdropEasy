@@ -95,7 +95,10 @@ For styling add these to your theme
 # Click Control
 
 For custom action on item click and preventing frament change refer this example
-    //ovveride this function in your activity
+   
+   
+   `//ovveride this function in your activity`
+    
     public boolean onClickMenuItem(MenuItem item){
         if(item.getItemId()==R.id.sign_out){
             signOut();
