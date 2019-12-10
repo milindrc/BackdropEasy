@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.backdropeasy.matrixdev.databinding.ActivityBackdropListBinding;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
@@ -41,7 +42,7 @@ public class BackdropListActivity extends AppCompatActivity {
 
         setStatusBarColor(getResources().getColor(R.color.back_layer_color));
 
-        fragmentSwitcher = new FragmentSwitcher(getSupportFragmentManager(),this);
+        fragmentSwitcher = new FragmentSwitcher(getSupportFragmentManager(), this);
 
         sheetBehavior = BottomSheetBehavior.from(binding.contentLayout);
         sheetBehavior.setFitToContents(false);
@@ -86,9 +87,11 @@ public class BackdropListActivity extends AppCompatActivity {
         binding.navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                fragmentSwitcher.changeFragment(getFragment(menuItem));
-                binding.toolbarTitle.setText(menuItem.getTitle());
-                binding.navigationView.setCheckedItem(menuItem);
+                if (!onClickMenuItem(menuItem)) {
+                    fragmentSwitcher.changeFragment(getFragment(menuItem));
+                    binding.toolbarTitle.setText(menuItem.getTitle());
+                    binding.navigationView.setCheckedItem(menuItem);
+                }
                 toggleSheet();
                 return false;
             }
@@ -127,7 +130,7 @@ public class BackdropListActivity extends AppCompatActivity {
         }
     }
 
-    public ActivityBackdropListBinding getBinding(){
+    public ActivityBackdropListBinding getBinding() {
         return binding;
     }
 
@@ -135,20 +138,28 @@ public class BackdropListActivity extends AppCompatActivity {
         return R.menu.backdrop_menu;
     }
 
-    public Fragment getFragment(MenuItem item){
+    public Fragment getFragment(MenuItem item) {
         if (item.getItemId() == R.id.a) {
             return BlankFragment.newInstance("A", "");
-        }else if (item.getItemId() == R.id.b) {
+        } else if (item.getItemId() == R.id.b) {
             return BlankFragment.newInstance("B", "");
-        }else if (item.getItemId() == R.id.c) {
+        } else if (item.getItemId() == R.id.c) {
             return BlankFragment.newInstance("C", "");
-        }else if (item.getItemId() == R.id.d) {
+        } else if (item.getItemId() == R.id.d) {
             return BlankFragment.newInstance("D", "");
-        }else if (item.getItemId() == R.id.e) {
+        } else if (item.getItemId() == R.id.e) {
             return BlankFragment.newInstance("E", "");
-        }else{
+        } else {
             return null;
         }
+    }
+
+    public boolean onClickMenuItem(MenuItem item) {
+//        if (item.getItemId() == R.id.e) {
+//            Toast.makeText(getBaseContext(), "test", Toast.LENGTH_LONG).show();
+//            return true;
+//        }
+        return false;
     }
 
 }
