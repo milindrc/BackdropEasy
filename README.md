@@ -38,22 +38,15 @@ Step 2. Add the dependency
 
 	    @Override
 	    public Fragment getFragment(MenuItem item) {
-		if (item.getItemId() == R.id.a) {
-		    return BlankFragment.newInstance("A", "");
-		}else if (item.getItemId() == R.id.b) {
-		    return BlankFragment.newInstance("B", "");
-		}else if (item.getItemId() == R.id.c) {
-		    return BlankFragment.newInstance("C", "");
-		}else if (item.getItemId() == R.id.d) {
-		    return BlankFragment.newInstance("D", "");
-		}else if (item.getItemId() == R.id.e) {
-		    return BlankFragment.newInstance("E", "");
-		}else if (item.getItemId() == R.id.f) {
-		    return BlankFragment.newInstance("F", "");
-		}else if (item.getItemId() == R.id.g) {
-		    return BlankFragment.newInstance("G", "");
-		}else{
-		    return null;
+		switch (item.getItemId()){
+		    case R.id.a: getBinding().headerTitle.setText("Category A"); return BlankFragment.newInstance("A","");
+		    case R.id.b: getBinding().headerTitle.setText("Category B"); return BlankFragment.newInstance("B", "");
+		    case R.id.c: getBinding().headerTitle.setText("Category C"); return BlankFragment.newInstance("C", "");
+		    case R.id.d: getBinding().headerTitle.setText("Category D"); return BlankFragment.newInstance("D", "");
+		    case R.id.e: getBinding().headerTitle.setText("Category E"); return BlankFragment.newInstance("E", "");
+		    case R.id.f: getBinding().headerTitle.setText("Category F"); return BlankFragment.newInstance("F", "");
+		    case R.id.g: getBinding().headerTitle.setText("Category G"); return BlankFragment.newInstance("G", "");
+		    default: return null;
 		}
 	    }
 	}
