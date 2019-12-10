@@ -2,10 +2,12 @@ package com.backdropeasy.matrixdev;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import android.animation.ObjectAnimator;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -34,6 +36,9 @@ public class BackdropListActivity extends AppCompatActivity {
 
     private void initUI() {
         setSupportActionBar(binding.toolbar);
+
+        setStatusBarColor(getResources().getColor(R.color.back_layer_color));
+
         fragmentSwitcher = new FragmentSwitcher(getSupportFragmentManager(),this);
 
         sheetBehavior = BottomSheetBehavior.from(binding.contentLayout);
@@ -46,6 +51,12 @@ public class BackdropListActivity extends AppCompatActivity {
 
 
         setListeners();
+    }
+
+    private void setStatusBarColor(int color) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(color);
+        }
     }
 
     private void setInitialItem() {
@@ -112,6 +123,10 @@ public class BackdropListActivity extends AppCompatActivity {
         } else {
             sheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
         }
+    }
+
+    public ActivityBackdropListBinding getBinding(){
+        return binding;
     }
 
     public int getMenu() {
