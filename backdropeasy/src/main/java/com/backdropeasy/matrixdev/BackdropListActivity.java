@@ -88,7 +88,7 @@ public class BackdropListActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 fragmentSwitcher.changeFragment(getFragment(menuItem));
                 binding.toolbarTitle.setText(menuItem.getTitle());
-                menuItem.setChecked(true);
+                binding.navigationView.setCheckedItem(menuItem);
                 toggleSheet();
                 return false;
             }
