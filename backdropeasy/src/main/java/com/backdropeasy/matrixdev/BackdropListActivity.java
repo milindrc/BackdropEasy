@@ -95,7 +95,7 @@ public class BackdropListActivity extends AppCompatActivity {
                     binding.toolbarTitle.setText(menuItem.getTitle());
                     binding.navigationView.setCheckedItem(menuItem);
                 }
-                if(!animation.isRunning())
+                if(animation==null || !animation.isRunning())
                     toggleSheet();
                 binding.dividerLayout.setVisibility(View.VISIBLE);
                 return false;
