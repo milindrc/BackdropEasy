@@ -50,3 +50,10 @@ Step 2. Add the dependency
 		}
 	    }
 	}
+	
+# Styling
+
+For styling add these to your theme
+
+    <color name="back_layer_color">#4527A0</color>
+    <color name="front_layer_color">#ffffff</color>
