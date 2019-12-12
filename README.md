@@ -95,6 +95,17 @@ For styling add these to your theme
     <color name="back_layer_color">#4527A0</color>
     <color name="front_layer_color">#ffffff</color>
     
+# Useful functions
+
+Access any view on screen
+	getBinding()
+
+Or you could inflate your own menu with searchview in toolbar 
+
+
+Enable search view in toolbar
+	getBinding()
+
 # Click Control
 
 For custom action on item click and preventing frament change refer this example
