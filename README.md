@@ -98,12 +98,15 @@ For styling add these to your theme
 # Useful functions
 
 Access any view on screen
+
 	getBinding()
 
 Or you could inflate your own menu with searchview in toolbar 
 
 
+
 Enable search view in toolbar
+	
 	getBinding()
 
 # Click Control
