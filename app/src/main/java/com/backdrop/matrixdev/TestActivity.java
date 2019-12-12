@@ -15,6 +15,7 @@ public class TestActivity extends BackdropListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setToolbarSearchEnabled(true);
     }
 
     @Override
@@ -37,4 +38,6 @@ public class TestActivity extends BackdropListActivity {
             default: return null;
         }
     }
+
+
 }

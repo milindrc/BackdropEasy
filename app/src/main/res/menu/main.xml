@@ -9,7 +9,7 @@
         <item
             android:checkable="true"
             android:id="@+id/a"
-            android:title="A" />
+            android:title="AAAAAAAAAAAAA" />
         <item
             android:checkable="true"
             android:id="@+id/b"

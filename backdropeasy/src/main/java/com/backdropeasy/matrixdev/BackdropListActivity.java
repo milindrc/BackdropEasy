@@ -95,10 +95,10 @@ public class BackdropListActivity extends AppCompatActivity {
                     fragmentSwitcher.changeFragment(getFragment(menuItem));
                     binding.toolbarTitle.setText(menuItem.getTitle());
                     binding.navigationView.setCheckedItem(menuItem);
+                    binding.dividerLayout.setVisibility(View.VISIBLE);
                 }
                 if(animation==null || !animation.isRunning())
                     toggleSheet();
-                binding.dividerLayout.setVisibility(View.VISIBLE);
                 return false;
             }
         });
@@ -109,7 +109,20 @@ public class BackdropListActivity extends AppCompatActivity {
                 return true;
             }
         });
+        binding.toolbarSearch.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+            @Override
+            public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                if(binding.toolbarSearch.isIconified() && binding.toolbarTitle.getVisibility() == View.GONE){
+                    binding.toolbarTitle.setVisibility(View.VISIBLE);
+                }else if(!binding.toolbarSearch.isIconified()){
+                    binding.toolbarTitle.setVisibility(View.GONE);
+                }
+            }
+        });
+    }
 
+    public void setToolbarSearchEnabled(boolean isEnabled){
+        binding.toolbarSearch.setVisibility(isEnabled?View.VISIBLE:View.GONE);
     }
 
     private void toggleSheet() {
