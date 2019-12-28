@@ -107,7 +107,8 @@ Or you could inflate your own menu with searchview in toolbar
 
 Enable search view in toolbar
 	
-	getBinding()
+	setToolbarSearchEnabled(true);
+	getBinding().toolbarSearch // to get the instance
 
 # Click Control
 
