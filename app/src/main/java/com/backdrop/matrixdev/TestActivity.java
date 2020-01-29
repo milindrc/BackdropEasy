@@ -24,7 +24,6 @@ public class TestActivity extends BackdropListActivity {
     }
 
 
-
     @Override
     public Fragment getFragment(MenuItem item) {
         switch (item.getItemId()){
