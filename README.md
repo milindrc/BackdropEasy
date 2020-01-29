@@ -94,6 +94,10 @@ For styling add these to your theme
 
     <color name="back_layer_color">#4527A0</color>
     <color name="front_layer_color">#ffffff</color>
+    <color name="backdrop_menu_text_color">#ffffff</color>
+    <color name="backdrop_menu_icon_color">#FFFFFF</color>
+    <color name="backdrop_title_color">#FFFFFF</color>
+
     
 # Useful functions
 
