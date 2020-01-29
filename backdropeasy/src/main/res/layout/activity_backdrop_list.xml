@@ -43,7 +43,7 @@
                         style="@style/SelectableItemBackground"
                         android:layout_marginLeft="10dp"
                         android:padding="5dp"
-                        android:tint="@android:color/white"
+                        android:tint="@color/backdrop_menu_icon_color"
                         android:id="@+id/menu_button"
                         android:layout_centerVertical="true"
                         android:src="@drawable/ic_menu_grey_700_24dp"
@@ -58,7 +58,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="18sp"
                         android:singleLine="true"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/backdrop_title_color"
                         android:text="@string/app_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -103,7 +103,7 @@
                 <com.google.android.material.navigation.NavigationView
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    app:itemTextColor="@color/front_layer_color"
+                    app:itemTextColor="@color/backdrop_menu_text_color"
                     android:id="@+id/navigation_view"
                     app:elevation="0dp"
                     android:background="@android:color/transparent"
