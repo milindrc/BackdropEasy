@@ -8,4 +8,5 @@
     <color name="backdrop_menu_text_color">#ffffff</color>
     <color name="backdrop_menu_icon_color">#FFFFFF</color>
     <color name="backdrop_title_color">#FFFFFF</color>
+    <color name="heading_color">#000000</color>
 </resources>
