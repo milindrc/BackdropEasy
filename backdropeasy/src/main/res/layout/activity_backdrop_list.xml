@@ -156,7 +156,7 @@
 
                 <RelativeLayout
                     android:id="@+id/divider_layout"
-                    android:background="@android:color/white"
+                    android:background="@color/front_layer_color"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <View
